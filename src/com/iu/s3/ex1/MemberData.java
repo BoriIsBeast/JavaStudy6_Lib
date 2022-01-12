@@ -21,7 +21,65 @@ public class MemberData {
 		System.out.println(this.data);
 	}
 	
+	public MemberDTO removeMember(ArrayList<MemberDTO> ar) {
+		//삭제하고싶은 Id를 입력 받아서 
+		//ArrayList 에서 삭제
+		MemberDTO memberDTO = null;
+		
+		System.out.println("삭제하고싶은 ID를 입력하세요");
+		String id = sc.next();
+		
+		//int index = -1;
+		
+		for(int i = 0;i<ar.size();i++) {
+			if(ar.get(i).getId().equals(id)) {
+				//index =i;
+				memberDTO = ar.remove(i);
+				break;
+			}
+			
+		}
+		
+		return memberDTO;
+	}
+	
+	
 	public void addMember(ArrayList<MemberDTO> ar) {
+		
+		MemberDTO memberDTO = new MemberDTO();
+		System.out.println("ID입력");
+		memberDTO.setId(sc.next());
+		System.out.println("PW 입력");
+		memberDTO.setPw(sc.next());
+		System.out.println("Name입력");
+		memberDTO.setName(sc.next());
+		System.out.println("Email입력");
+		memberDTO.setEmail(sc.next());
+		System.out.println("Age입력");
+		memberDTO.setAge(sc.nextInt());
+		
+		//id-pw-name
+		String data = "iu-iu-iu-email-30";
+		MemberDTO mem2 = new MemberDTO();
+		String [] d = data.split("-");
+		mem2.setId(d[0]);
+		mem2.setPw(d[1]);
+		mem2.setName(d[2]);
+		mem2.setEmail(d[3]);
+		mem2.setAge(Integer.parseInt(d[4]));
+		
+		
+		
+		
+		
+		
+		
+		
+		ar.add(memberDTO);
+	}
+	
+	public void addMembera(ArrayList<MemberDTO> ar) {///////내가한것
+		
 		//새로 추가할 MemberDTO 생성
 		//키보드로 부터 id, pw, name, email, age 입력받아서
 		//MemberDTO의 멤버변수 값으로 대입
