@@ -1,10 +1,10 @@
-package com.iu.s3.ex1;
+package com.iu.s3.ex1.member;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-import com.iu.s2.util.token.SeasonDTO;
+
 
 public class MemberData {
 
@@ -78,36 +78,7 @@ public class MemberData {
 		ar.add(memberDTO);
 	}
 	
-	public void addMembera(ArrayList<MemberDTO> ar) {///////내가한것
-		
-		//새로 추가할 MemberDTO 생성
-		//키보드로 부터 id, pw, name, email, age 입력받아서
-		//MemberDTO의 멤버변수 값으로 대입
-		//매개변수로 받은 ar에 MemberDTO 추가
-		Scanner sc = new Scanner(System.in);
-		
-		ArrayList<MemberDTO> aa = new ArrayList<>();
-		String info = "";
-		
-		System.out.println("추가할 회원의 정보를 입력하세요");
-		System.out.println("id - pw - name - email - age 순");
-		
-		info = sc.next();
-		
-		StringTokenizer st = new StringTokenizer(info, "-");
-		
-		while(st.hasMoreTokens()) {
-			MemberDTO memberDTO = new MemberDTO();
-			memberDTO.setId(st.nextToken().trim());
-			memberDTO.setPw(st.nextToken().trim());
-			memberDTO.setName(st.nextToken().trim());
-			memberDTO.setEmail(st.nextToken().trim());
-			memberDTO.setAge(Integer.parseInt(st.nextToken().trim()));
-			
-			ar.add(memberDTO);
-		}
-		
-	}
+	
 	
 	public ArrayList<MemberDTO> init() {
 		//data 에 있는 문자열을 StringTokenizer로 파싱해서

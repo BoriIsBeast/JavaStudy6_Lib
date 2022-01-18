@@ -1,19 +1,21 @@
 package com.iu.s3.ex2;
 
+import java.util.ArrayList;
+
 public class StudentMain {
 public static void main(String[] args) {
-	StudentData studetnData = new StudentData();
+	StudentData studentData = new StudentData();
 	
-	ArrayList<StudentDTO> students = StudentData.init();
+	ArrayList<StudentDTO> students = studentData.init();
 	
-	for(int i= 0;students.size();i++) {
+	for(int i= 0;i<students.size();i++) {
 
 
-		System.out.println(students.get(i).getId());
-		System.out.println(students.get(i).getPw());
 		System.out.println(students.get(i).getName());
-		System.out.println(students.get(i).getEmail());
-		System.out.println(students.get(i).getAge());
+		System.out.println(students.get(i).getNum());
+		System.out.println(students.get(i).getKor());
+		System.out.println(students.get(i).getEng());
+		System.out.println(students.get(i).getMath());
 		System.out.println("============================");
 	}
 }

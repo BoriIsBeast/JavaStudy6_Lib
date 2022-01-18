@@ -1,12 +1,13 @@
 package com.iu.s3.ex2;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class StudentData {
 
 	private String info;
-
+	Scanner sc;
 public StudentData() {
 	this.info = "name1,1,15,50,60,";
 	this.info = this.info + "name2,2,52,68,40,";
@@ -14,8 +15,20 @@ public StudentData() {
 	
 	//학생들의 정보를 파싱해서 총점과 평균도 계산 후 전체 출력
 	//학생의 정보를 추가
-	
-	
+	sc= new Scanner(System.in);
+}
+
+	public void addStudent(ArrayList<StudentDTO> ar){
+		
+		 StudentDTO studentDTO = new StudentDTO();
+		 
+		System.out.println("id입력");
+		studentDTO.setName(sc.next());
+		
+		
+		
+		
+	}
 	public ArrayList<StudentDTO> init(){
 
 		
@@ -38,4 +51,4 @@ public StudentData() {
 	return ar;
 	}
 }
-}
+
